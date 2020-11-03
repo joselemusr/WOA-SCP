@@ -26,9 +26,9 @@ connect = Database.Database()
 
 # Algorithms
 
-from Metaheuristics.HHO_SCP import HHO_SCP
-from Metaheuristics.HHOQL_SCP import HHOQL_SCP
 from Metaheuristics.SCA_SCP import SineCosine_SCP
+from Metaheuristics.WOAQL_SCP import WOAQL_SCP
+from Metaheuristics.WOA_SCP import WOA_SCP
 
 flag = True
 while flag:
@@ -46,7 +46,7 @@ while flag:
     print("------------------------------------------------------------------------------------------------------------------\n")
 
     if(algorithm == 'WOA_SCP'):
-        if  HHO_SCP(id,
+        if  WOA_SCP(id,
                 params['instance_file'],
                 params['instance_dir'],
                 params['population'],
@@ -57,7 +57,7 @@ while flag:
             print(f'Ejecución {id} completada ')
 
     if(algorithm == 'WOAQL_SCP'):
-        if  HHOQL_SCP(id,
+        if  WOAQL_SCP(id,
                 params['instance_file'],
                 params['instance_dir'],
                 params['population'],

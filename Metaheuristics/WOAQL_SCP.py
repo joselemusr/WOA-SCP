@@ -42,7 +42,7 @@ operatorBinarization = ['Standard','Complement','Elitist','Static','ElitistRoule
 
 DS_actions = [tf + "," + ob for tf in transferFunction for ob in operatorBinarization]
 
-def HHOQL_SCP(id,instance_file,instance_dir,population,maxIter,discretizacionScheme,ql_alpha,ql_gamma,repair):
+def WOAQL_SCP(id,instance_file,instance_dir,population,maxIter,discretizacionScheme,ql_alpha,ql_gamma,repair):
 
     instance_path = workdirInstance + instance_dir + instance_file
 
