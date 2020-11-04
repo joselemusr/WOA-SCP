@@ -42,18 +42,18 @@ insertDatosEjecucion = datosEjecucion.insert().returning(datosEjecucion.c.id)
 
 #algorithms = ['HHO_SCP','HHOQL_SCP']
 algorithms = ['WOA_SCP']
-instances = ['mscp41']
-#instances = ['mscp41','mscp42','mscp43','mscp44','mscp45','mscp46','mscp47','mscp48','mscp49','mscp410','mscp51','mscp52','mscp53','mscp54','mscp55','mscp56','mscp57','mscp58','mscp59','mscp510','mscp61','mscp62','mscp63','mscp64','mscp65','mscpa1','mscpa2','mscpa3','mscpa4','mscpa5','mscpb1','mscpb2','mscpb3','mscpb4','mscpb5','mscpc1','mscpc2','mscpc3','mscpc4','mscpc5','mscpd1','mscpd2','mscpd3','mscpd4','mscpd5',]
+#instances = ['mscp41']
+instances = ['mscp41','mscp42','mscp43','mscp44','mscp45','mscp46','mscp47','mscp48','mscp49','mscp410','mscp51','mscp52','mscp53','mscp54','mscp55','mscp56','mscp57','mscp58','mscp59','mscp510','mscp61','mscp62','mscp63','mscp64','mscp65','mscpa1','mscpa2','mscpa3','mscpa4','mscpa5','mscpb1','mscpb2','mscpb3','mscpb4','mscpb5','mscpc1','mscpc2','mscpc3','mscpc4','mscpc5','mscpd1','mscpd2','mscpd3','mscpd4','mscpd5',]
 runs = 10
 population  = 20
-maxIter = 50
+maxIter = 5000
 ql_alpha = 0.1
 ql_gamma =  0.4
-repair = 3 # 1:Simple; 2:Compleja; 3:RepairGPU
+repair = 1 # 1:Simple; 2:Compleja; 3:RepairGPU
 instance_dir = "MSCP/"
-for instance in instances:
-    for algorithm in algorithms:
-        for run in range(runs):
+for run in range(runs):
+    for instance in instances:
+        for algorithm in algorithms:
             data = {
                 'nombre_algoritmo' : algorithm,
 
