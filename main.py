@@ -56,6 +56,28 @@ while flag:
                 ) == True:
             print(f'Ejecución {id} completada ')
 
+    if(algorithm == 'WOA_SCP_repair2'):
+        if  WOA_SCP(id,
+                params['instance_file'],
+                params['instance_dir'],
+                params['population'],
+                params['maxIter'],
+                params['discretizationScheme'],
+                params['repair']
+                ) == True:
+            print(f'Ejecución {id} completada ')
+
+    if(algorithm == 'WOA_SCP_repair3'):
+        if  WOA_SCP(id,
+                params['instance_file'],
+                params['instance_dir'],
+                params['population'],
+                params['maxIter'],
+                params['discretizationScheme'],
+                params['repair']
+                ) == True:
+            print(f'Ejecución {id} completada ')
+
     if(algorithm == 'WOAQL_SCP'):
         if  WOAQL_SCP(id,
                 params['instance_file'],
@@ -65,7 +87,10 @@ while flag:
                 params['discretizationScheme'],
                 params['ql_alpha'],
                 params['ql_gamma'],
-                params['repair']
+                params['repair'],
+                params['policy'],
+                params['rewardType'],
+                params['qlAlphaType']
                 ) == True:
             print(f'Ejecución {id} completada ')
 

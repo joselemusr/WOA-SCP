@@ -138,7 +138,7 @@ def WOA_SCP(id,instance_file,instance_dir,population,maxIter,discretizacionSchem
                 "fitness": BestFitnes,
                 "clockTime": walltimeEnd,
                 "processTime": processTimeEnd,
-                "DS":DS,
+                "DS":str(DS),
                 "Diversidades":  str(diversidades),
                 "PorcentajeExplor": str(PorcentajeExplor)
                 #"PorcentajeExplot": str(PorcentajeExplot),
